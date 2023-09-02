@@ -3,7 +3,7 @@ const express = require('express')
 const app=express()
 const mongoose =require('mongoose')
 const PORT =process.env.PORT || 4000
-const {MONGOURI}=require("./prod")
+const {MONGOURI}=require("./dev")
 
 mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
