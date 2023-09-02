@@ -27,5 +27,5 @@ app.use(require('./routes/User'))
 
 
 app.listen(PORT,()=>{
-    console.log("Server is running on",PORT);
+    console.log("Server is running on ${PORT}",PORT);
 })
