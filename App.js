@@ -1,7 +1,7 @@
 const express = require('express')
 const app=express()
 const mongoose =require('mongoose')
-const PORT =process.env.PORT || 4000
+const PORT = 4000
 // const {MONGOURI}=require("./dev")
 
 const connectToMongo = require('./Key');
@@ -29,5 +29,5 @@ app.use(require('./routes/User'))
 
 
 app.listen(PORT,()=>{
-    console.log(`Server is running on PORT ${PORT}`);
+    console.log(`Instagram Backend Server is running on PORT ${PORT}`);
 })
