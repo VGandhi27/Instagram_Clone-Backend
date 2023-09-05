@@ -1,11 +1,10 @@
-require("dotenv").config();
 const express = require('express')
 const app=express()
 const mongoose =require('mongoose')
 const PORT =4000
-const {MONGOURI}=require("./Key")
+const MONGOURL="mongodb+srv://Vidushi:EUltk96CrFcClKCi@cluster0.u1sord4.mongodb.net/?retryWrites=true&w=majority";
 
-mongoose.connect(MONGOURI,{
+mongoose.connect(MONGOURL,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
