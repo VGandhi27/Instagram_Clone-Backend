@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Instagram Clone on Cloud",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
