@@ -1,13 +1,16 @@
 const express = require('express')
 const app=express()
 const mongoose =require('mongoose')
-const PORT =4000
-const MONGOURL="mongodb+srv://Vidushi:EUltk96CrFcClKCi@cluster0.u1sord4.mongodb.net/?retryWrites=true&w=majority";
+const PORT =process.env.PORT || 4000
+// const {MONGOURI}=require("./dev")
 
-mongoose.connect(MONGOURL,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-})
+const connectToMongo = require('./Key');
+connectToMongo();
+
+// mongoose.connect(MONGOURI,{
+//     useNewUrlParser:true,
+//     useUnifiedTopology:true
+// })
 mongoose.connection.on('connected',()=>{
     console.log("connected to mongo")
 })

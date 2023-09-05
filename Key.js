@@ -1,11 +1,17 @@
-// if(process.env.NODE_ENV==='production'){
-//     module.exports = require('./prod')
-// }else{
-//     module.exports = require('./dev')
-// }
+const { default: mongoose } = require('mongoose');
+ 
+ 
+ const moongoose=require('mongoose');
+ 
+ 
+//  const mongoURI ="mongodb://localhost:27017/inotebook"
+ const mongoURI ="mongodb+srv://Vidushi:EUltk96CrFcClKCi@cluster0.u1sord4.mongodb.net/?retryWrites=true&w=majority"
+  
 
-module.exports={
-    MONGOURI:"mongodb+srv://Vidushi:EUltk96CrFcClKCi@cluster0.u1sord4.mongodb.net/?retryWrites=true&w=majority",
-    JWT_SECRET:"gdjhvvdhjdbvxvjLsasdhpdbsbshshsbwey"
+ const connectToMongo =()=>{
+    mongoose.connect(mongoURI,()=>{
+        console.log("Connected to Mongo Successfully");
+    })
+ }
 
-}
+ module.exports = connectToMongo;
